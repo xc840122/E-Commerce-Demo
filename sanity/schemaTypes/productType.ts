@@ -2,8 +2,8 @@ import { TrolleyIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
 export const productType = defineType({
-  name: 'productType',
-  title: 'Product type',
+  name: 'product',
+  title: 'Product',
   type: 'document',
   icon: TrolleyIcon,
   fields: [
@@ -27,7 +27,7 @@ export const productType = defineType({
       name: 'image',
       title: 'Product image',
       type: 'image',
-      options: {hotspot: true},
+      options: { hotspot: true },
     }),
     defineField({
       name: 'price',
@@ -44,7 +44,7 @@ export const productType = defineType({
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      of: [{ type: 'reference', to: { type: 'category' } }],
     }),
     defineField({
       name: 'stock',
@@ -60,7 +60,7 @@ export const productType = defineType({
       price: 'price',
     },
     prepare(selection) {
-      const {title, media, price} = selection
+      const { title, media, price } = selection
       return {
         title,
         media,
