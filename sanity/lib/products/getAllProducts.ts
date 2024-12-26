@@ -3,9 +3,7 @@ import { sanityFetch } from "../live";
 
 export const getAllProducts = async () => {
   const ALL_PRODUCTS_QUERY = defineQuery(`
-    *[_type=="product"] | order(name asc){
-  name
-}`);
+    *[_type=="product"] | order(name asc)`);
 
   try {
     // Use sanityFetch to get data from Sanity
