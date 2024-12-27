@@ -15,7 +15,7 @@ export const productType = defineType({
     }),
     defineField({
       name: 'slug',
-      title: 'slug',
+      title: 'Slug',
       type: 'slug',
       options: {
         source: 'name',
@@ -25,7 +25,7 @@ export const productType = defineType({
     }),
     defineField({
       name: 'image',
-      title: 'Product image',
+      title: 'Product Image',
       type: 'image',
       options: { hotspot: true },
     }),
