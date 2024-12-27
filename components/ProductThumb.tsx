@@ -22,12 +22,12 @@ const ProductThumb = ({ product }: { product: Product }) => {
             sizes="(min-width: 768px) 100vw, (max-width: 1200px) 50vw,33vw"
           />
         )}
+        {isOutoStock && (
+          <div className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center'>
+            <p className='text-white text-lg font-bold'>Out of stock</p>
+          </div>
+        )}
       </div>
-      {isOutoStock && (
-        <div className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center'>
-          <p className='text-white text-lg font-bold'>Out of stock</p>
-        </div>
-      )}
       <div className="p-4">
         <h2 className="text-lg font-semibold text-gray-800 truncate">
           {product.name}
