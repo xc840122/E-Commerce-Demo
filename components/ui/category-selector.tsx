@@ -34,6 +34,8 @@ export function CategorySelectorComponent({
   const [value, setValue] = useState<string>("");
   const router = useRouter();
 
+  // console.log(value, "categoryVALUE")
+
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -46,7 +48,7 @@ export function CategorySelectorComponent({
             text-white hover:text-white font-bold px-2 py-4 rounded'
         >
           {value
-            ? categories.find((category) => category._id === value)?.title
+            ? categories.find(category => category._id === value)?.title
             : "Filter By Category"}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
@@ -65,8 +67,8 @@ export function CategorySelectorComponent({
                     .includes(e.currentTarget.value.toLowerCase())
                 );
                 if (selectCategory?.slug?.current) {
-                  setValue(selectCategory.slug.current);
                   router.push(`/category/${selectCategory.slug.current}`);
+                  setValue(selectCategory._id);
                   setOpen(false);
                 }
               }
@@ -75,13 +77,13 @@ export function CategorySelectorComponent({
           <CommandList>
             <CommandEmpty>No Category found.</CommandEmpty>
             <CommandGroup>
-              {categories.map((category) => (
+              {categories.map(category => (
                 <CommandItem
                   key={category._id}
-                  value={category.title}
+                  value={category._id}
                   onSelect={() => {
-                    setValue(value === category._id ? "" : category._id)
                     router.push(`/category/${category.slug?.current}`);
+                    setValue(category._id)
                     setOpen(false)
                   }}
                 >
@@ -89,7 +91,7 @@ export function CategorySelectorComponent({
                   <Check
                     className={cn(
                       "mr-2 h-4 w-4",
-                      value === category._id ? "opacity-100" : "opacity-0"
+                      value === category._id ? "opacity-100" : "opacity-0",
                     )}
                   />
                 </CommandItem>
