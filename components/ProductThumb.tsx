@@ -15,7 +15,7 @@ const ProductThumb = ({ product }: { product: Product }) => {
       <div className="relative aspect-square w-full h-full overflow-hidden">
         {product.image && (
           <Image
-            className="object-contain transition-transform duration-300 group-hover:scale-105"
+            className="object-contain transition-transform duration-300 group-hover:scale-105 p-4"
             src={imageUrl(product.image).url()}
             alt={product.name || "Product image"}
             fill
@@ -29,7 +29,7 @@ const ProductThumb = ({ product }: { product: Product }) => {
         )}
       </div>
       <div className="p-4">
-        <h2 className="text-lg font-semibold text-gray-800 truncate">
+        <h2 className="text-lg font-semibold text-gray-800 truncate text-wrap">
           {product.name}
         </h2>
 
