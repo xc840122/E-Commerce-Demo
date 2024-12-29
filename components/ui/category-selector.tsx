@@ -58,21 +58,22 @@ export function CategorySelectorComponent({
             className="h-9"
             onKeyDown={e => {
               if (e.key === "Enter") {
+                // console.log(e.currentTarget.value, "category-selector");
                 const selectCategory = categories.find(c =>
                   c.title
                     ?.toLowerCase()
                     .includes(e.currentTarget.value.toLowerCase())
                 );
                 if (selectCategory?.slug?.current) {
-                  setValue(selectCategory._id);
-                  router.push(`/categories/${selectCategory.slug.current}`);
+                  setValue(selectCategory.slug.current);
+                  router.push(`/category/${selectCategory.slug.current}`);
                   setOpen(false);
                 }
               }
             }}
           />
           <CommandList>
-            <CommandEmpty>No framework found.</CommandEmpty>
+            <CommandEmpty>No Category found.</CommandEmpty>
             <CommandGroup>
               {categories.map((category) => (
                 <CommandItem
@@ -80,6 +81,7 @@ export function CategorySelectorComponent({
                   value={category.title}
                   onSelect={() => {
                     setValue(value === category._id ? "" : category._id)
+                    router.push(`/category/${category.slug?.current}`);
                     setOpen(false)
                   }}
                 >
@@ -90,7 +92,6 @@ export function CategorySelectorComponent({
                       value === category._id ? "opacity-100" : "opacity-0"
                     )}
                   />
-                  {category.title}
                 </CommandItem>
               ))}
             </CommandGroup>
