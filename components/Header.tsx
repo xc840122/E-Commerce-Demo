@@ -6,7 +6,7 @@ import Form from 'next/form'
 import React from 'react'
 import { TrolleyIcon } from '@sanity/icons';
 import { PackageIcon } from 'lucide-react';
-import useBasketStore from '@/store';
+import useBasketStore from '@/store/store';
 
 function Header() {
   const { user } = useUser()
