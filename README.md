@@ -15,6 +15,8 @@ This repository contains the code for building a **real-time, responsive, full-s
 - **Animations with Framer Motion**: Add fluid and interactive animations.
 - **TypeScript Integration**: Reduce bugs and improve code maintainability.
 - **State Management**: Implement global state using Zustand.
+<img width="433" alt="image" src="https://github.com/user-attachments/assets/43147bc0-4582-465d-9435-6f21ea2d49f2" />
+<img width="422" alt="image" src="https://github.com/user-attachments/assets/4bea85f2-1644-43ff-b29c-ad322d50bbb8" />
 
 ---
 
