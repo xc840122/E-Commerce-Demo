@@ -6,6 +6,9 @@ import { PortableText } from "next-sanity";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-static";
+export const revalidate = 60; // revalidate every minute
+
 async function ProductPage({
   params,
 }: {
@@ -16,6 +19,10 @@ async function ProductPage({
   const { slug } = await params;
   const product = await getProductBySlug(slug)
 
+  console.log(
+    crypto.randomUUID().slice(0, 5),
+    `>>> Rerendering product page for ${slug}`
+  );
 
   if (!product) {
     return notFound();
