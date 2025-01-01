@@ -1,4 +1,4 @@
-# Real-Time Full Stack E-Commerce App with Next.js 15
+<img width="1408" alt="image" src="https://github.com/user-attachments/assets/abea111b-db5d-442e-9c90-be604f048b69" /># Real-Time Full Stack E-Commerce App with Next.js 15
 
 This repository contains the code for building a **real-time, responsive, full-stack e-commerce app** using the latest **Next.js 15**. Join this hands-on project to explore modern web development concepts, advanced integrations, and industry-standard tools.
 
@@ -15,6 +15,8 @@ This repository contains the code for building a **real-time, responsive, full-s
 - **Animations with Framer Motion**: Add fluid and interactive animations.
 - **TypeScript Integration**: Reduce bugs and improve code maintainability.
 - **State Management**: Implement global state using Zustand.
+
+<img width="1408" alt="image" src="https://github.com/user-attachments/assets/ce7df5c6-c3e9-4bd3-b794-babd926aaba7" />
 <img width="433" alt="image" src="https://github.com/user-attachments/assets/43147bc0-4582-465d-9435-6f21ea2d49f2" />
 <img width="422" alt="image" src="https://github.com/user-attachments/assets/4bea85f2-1644-43ff-b29c-ad322d50bbb8" />
 
