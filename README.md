@@ -22,6 +22,12 @@ This repository contains the code for building a **real-time, responsive, full-s
 
 ---
 
+## Run the APP
+- **Start the Development Server**: npm run dev
+- **APP Web**: http://localhost:3000
+- **Sanity CMS Console**: http://localhost:3000/studio
+
+
 ## Tech Stack
 
 - **Frontend**: React, Next.js 15, Shadcn/UI, Tailwind CSS, Framer Motion
