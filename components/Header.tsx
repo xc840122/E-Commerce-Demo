@@ -84,7 +84,7 @@ function Header() {
           <ClerkLoaded>
             <SignedIn>
               <Link
-                href='/orders'
+                href='/order'
                 className='flex-1 relative flex justify-center sm:justify-start sm:flex-none items-center space-x-2
                  bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 py-4 rounded'
               >
